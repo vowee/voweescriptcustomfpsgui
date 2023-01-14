@@ -1,4 +1,4 @@
---9d00ade984c99ba610487bcf7d2b0aedf497aacfd8888c089bffa56314b5ff39d698f931d5317aa0bc3a0176a561f7abc2ff0dcd43b3e9d11b8c473b9b8b461a
+
 local http_request = syn and syn.request or request;
 local hwidPaste = loadstring(game:HttpGet("https://pastebin.com/raw/NQXauJ5z"))()
 
