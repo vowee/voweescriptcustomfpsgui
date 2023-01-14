@@ -19,7 +19,7 @@ local plrs = game:GetService("Players")
 local lplr = game:GetService("Players").LocalPlayer
 local TeamBased = false ; local teambasedswitch = "c"
 local presskeytoaim = true; local aimkey = "t"
-aimbothider = false; aimbothiderspeed = 0.315
+aimbothider = false; aimbothiderspeed = aimbothiderspeed1
 local Aim_Assist = false ; Aim_Assist_Key = {Enum.KeyCode.LeftControl, "z"}
 local espupdatetime = 5; autoesp = false; local charmsesp = true
 local movementcounting = true
@@ -87,7 +87,7 @@ local mousedown = false
 local isonmovething = false
 local mouseoffset = Vector2.new()
 local mousedown = false
-local bspeed = 745
+local bspeed = bspeed1
 local aimbotoffset = {dd = ":", sp = " ", qa = "a", qb = "b",qc = "c", qd = "d", qe = "e", qf = "f", qg = "g" , qh = "h" , qi = "i", qj = "j", qk = "k", ql = "l", qm = "m", qn = "n", qo = "o", qp = "p", qq = "q", qr = "r", qs = "s", qt = "t", qu = "u", qv = "w", qx = "x", qy = "y", qz = "z"}
 
 
