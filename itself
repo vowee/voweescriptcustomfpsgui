@@ -172,7 +172,7 @@ st1_2.TextWrapped = true
 
 local aimbothiderbox = Instance.new("TextBox")
 aimbothiderbox.Name = getrandomstring()
-aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." off"
+aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeedvalue).." off"
 aimbothiderbox.Size = UDim2.new(1, 0,0.162, 0)
 aimbothiderbox.TextScaled = true
 aimbothiderbox.TextColor3 =Color3.fromRGB(255, 117, 117)
@@ -187,7 +187,7 @@ st1_3.BackgroundTransparency = 1
 st1_3.Position = UDim2.new(0, 0, 0.18558608, 0)
 st1_3.Size = UDim2.new(0.999991121, 0, 0.161862016, 0)
 st1_3.Font = Enum.Font.ArialBold
-st1_3.Text = "Bullet speed ="..tostring(bspeed)
+st1_3.Text = "Bullet speed ="..tostring(bulletspeedvalue)
 st1_3.TextColor3 = Color3.new(1, 1, 1)
 st1_3.TextScaled = true
 st1_3.TextSize = 14
@@ -262,15 +262,15 @@ aimbothiderbox.FocusLost:Connect(function()
 	if numb ~= nil then
 		aimbothiderspeed = numb
 		if aimbothider == true then
-			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." on"
+			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeedvalue).." on"
 		else
-			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." off"
+			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeedvalue).." off"
 		end
 	else
 		if aimbothider == true then
-			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." on"
+			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeedvalue).." on"
 		else
-			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." off"
+			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeedvalue).." off"
 		end
 	end
 end)
@@ -319,17 +319,17 @@ mouse.KeyDown:Connect(function(a)
 		if aimbothider == false then
 			aimbothider = true
 			if aimbothider == true then
-			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." on"
+			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeedvalue).." on"
 		else
-			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." off"
+			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeedvalue).." off"
 		end
 		else
 			
 			aimbothider = false
 			if aimbothider == true then
-			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." on"
+			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeedvalue).." on"
 		else
-			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." off"
+			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeedvalue).." off"
 		end
 		end
 		if aimbothider == true then
@@ -643,7 +643,6 @@ end)
     end
 
 end
-
 
 
 
