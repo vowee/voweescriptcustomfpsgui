@@ -627,7 +627,7 @@ end)
 
 
 local Toggled = false
-local KeyCode = KeyCode1
+local KeyCode = "v"
 
 
 function AA()
