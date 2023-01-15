@@ -1,7 +1,7 @@
 local player = game.Players.localPlayer
 local http_request = syn and syn.request or request;
 local HWIDTABLE = loadstring(game:HttpGet("https://pastebin.com/raw/NQXauJ5z"))()
-local HWID = game:GetService("RbxAnalysticsService"):GetClientId()
+local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
 
 
 for i, v in pairs(HWIDTABLE) do
