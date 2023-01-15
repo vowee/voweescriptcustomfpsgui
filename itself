@@ -209,7 +209,7 @@ Name.BackgroundColor3 = Color3.new(1, 1, 1)
 Name.BackgroundTransparency = 1
 Name.Size = UDim2.new(0.838, 0, 1, 0)
 Name.Font = Enum.Font.Arial
-Name.Text = "vowee#9323"
+Name.Text = "discord.gg/cUjBUQJesK"
 Name.TextColor3 = Color3.fromRGB(193, 181, 255)
 Name.TextScaled = true
 Name.TextSize = 14
@@ -541,7 +541,7 @@ game:GetService("RunService").RenderStepped:Connect(function(dt)
 	else
 		st1_2.TextColor3 = Color3.new(1,0,0)
 	end
-	espstatustext.Text = ".gg/hHSM9HeBdh"
+	espstatustext.Text = "resolver"
 	if aimatpart and lplr.Character and lplr.Character.Head then
 		if BetterDeathCount and lastaimapart and lastaimapart == aimatpart then
 			local dist = (oldheadpos - aimatpart.CFrame.p).magnitude
