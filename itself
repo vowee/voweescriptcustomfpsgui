@@ -1,13 +1,11 @@
 local player = game.Players.localPlayer
 local http_request = syn and syn.request or request;
-local hwidPaste = loadstring(game:HttpGet("https://pastebin.com/raw/NQXauJ5z"))()
+local HWIDTABLE = loadstring(game:HttpGet("https://pastebin.com/raw/NQXauJ5z"))()
+local HWID = game:GetService("RbxAnalysticsService"):GetClientId()
 
-local body = http_request({Url = 'https://httpbin.org/get'; Method = 'GET'}).Body;
-local decoded = game:GetService("HttpService"):JSONDecode(body)
-local hwid = decoded.headers['Syn-Fingerprint']
 
-for i, v in pairs(hwidPaste) do
-    if v == hwid then
+for i, v in pairs(HWIDTABLE) do
+    if v == HWID then
         -- close sets
 -- custom fps gui made by vowee#9323
 print("whitelisted")
