@@ -1,5 +1,14 @@
+local player = game.Players.localPlayer
+local http_request = syn and syn.request or request;
+local body = http_request({Url = 'https://httpbin.org/get'; Method = 'GET'}).Body; 
+local hwidpaste = loadstring(game:HttpGet("https://raw.githubusercontent.com/vowee/voweescriptcustomfpsgui/main/whitelist"))()
+local decoded = game:GetService("HttpService"):JSONDecode(body)
+local hwid = decoded.headers['Syn-Fingerprint']
 
 
+for i, v in pairs(hwidpaste) do
+    if v == hwid then
+        -- close sets
 -- custom fps gui made by vowee#9323
 print("whitelisted")
 
@@ -209,7 +218,7 @@ Name.BackgroundColor3 = Color3.new(1, 1, 1)
 Name.BackgroundTransparency = 1
 Name.Size = UDim2.new(0.838, 0, 1, 0)
 Name.Font = Enum.Font.Arial
-Name.Text = "discord.gg/cUjBUQJesK"
+Name.Text = "vowee#9323"
 Name.TextColor3 = Color3.fromRGB(193, 181, 255)
 Name.TextScaled = true
 Name.TextSize = 14
@@ -541,7 +550,7 @@ game:GetService("RunService").RenderStepped:Connect(function(dt)
 	else
 		st1_2.TextColor3 = Color3.new(1,0,0)
 	end
-	espstatustext.Text = "resolver"
+	espstatustext.Text = ".gg/hHSM9HeBdh"
 	if aimatpart and lplr.Character and lplr.Character.Head then
 		if BetterDeathCount and lastaimapart and lastaimapart == aimatpart then
 			local dist = (oldheadpos - aimatpart.CFrame.p).magnitude
@@ -624,39 +633,11 @@ delay(0, function()
 		end
 	end
 end)
-
-
-local Toggled = false
-local KeyCode = "v"
-
-
-function AA()
-    local oldVelocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oldVelocity.X, -70, oldVelocity.Z)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oldVelocity.X, oldVelocity.Y, oldVelocity.Z)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oldVelocity.X, -70, oldVelocity.Z)
-    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 4.14
-end
-
-game:GetService('UserInputService').InputBegan:Connect(function(Key)
-    if Key.KeyCode == Enum.KeyCode[KeyCode:upper()] and not game:GetService('UserInputService'):GetFocusedTextBox() then
-        if Toggled then
-            Toggled = false
-            game.Players.LocalPlayer.Character.Humanoid.HipHeight = 1.85
-
-        elseif not Toggled then
-            Toggled = true
-
-            while Toggled do
-                AA()
-                task.wait()
-            end
-        end
-    end
-end)
-
 --warn("loaded")
 end)
-      
+        else
+            player:kick("FUCK YOU THINK YOU DOING SKID! (not white listed)")
+        
+    end
 
-
+end
