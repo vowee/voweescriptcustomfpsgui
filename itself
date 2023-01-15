@@ -636,7 +636,7 @@ end)
 --warn("loaded")
 end)
         else
-            player:kick("FUCK YOU THINK YOU DOING SKID! (not white listed)")
+            print(not whitelisted)
         
     end
 
