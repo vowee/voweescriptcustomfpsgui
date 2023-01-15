@@ -170,7 +170,7 @@ st1_2.TextWrapped = true
 
 local aimbothiderbox = Instance.new("TextBox")
 aimbothiderbox.Name = getrandomstring()
-aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." off"
+aimbothiderbox.Text = "Smooth :"..tostring(aimbothiderspeed).." off"
 aimbothiderbox.Size = UDim2.new(1, 0,0.162, 0)
 aimbothiderbox.TextScaled = true
 aimbothiderbox.TextColor3 =Color3.fromRGB(255, 117, 117)
@@ -260,15 +260,15 @@ aimbothiderbox.FocusLost:Connect(function()
 	if numb ~= nil then
 		aimbothiderspeed = numb
 		if aimbothider == true then
-			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." on"
+			aimbothiderbox.Text = "Smooth :"..tostring(aimbothiderspeed).." on"
 		else
-			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." off"
+			aimbothiderbox.Text = "Smooth :"..tostring(aimbothiderspeed).." off"
 		end
 	else
 		if aimbothider == true then
-			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." on"
+			aimbothiderbox.Text = "Smooth :"..tostring(aimbothiderspeed).." on"
 		else
-			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." off"
+			aimbothiderbox.Text = "Smooth :"..tostring(aimbothiderspeed).." off"
 		end
 	end
 end)
@@ -317,17 +317,17 @@ mouse.KeyDown:Connect(function(a)
 		if aimbothider == false then
 			aimbothider = true
 			if aimbothider == true then
-			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." on"
+			aimbothiderbox.Text = "Smooth :"..tostring(aimbothiderspeed).." on"
 		else
-			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." off"
+			aimbothiderbox.Text = "Smooth :"..tostring(aimbothiderspeed).." off"
 		end
 		else
 			
 			aimbothider = false
 			if aimbothider == true then
-			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." on"
+			aimbothiderbox.Text = "Smooth :"..tostring(aimbothiderspeed).." on"
 		else
-			aimbothiderbox.Text = "Speed :"..tostring(aimbothiderspeed).." off"
+			aimbothiderbox.Text = "Smooth :"..tostring(aimbothiderspeed).." off"
 		end
 		end
 		if aimbothider == true then
