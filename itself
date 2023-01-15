@@ -1,13 +1,5 @@
 
-local player = game.Players.localPlayer
-local http_request = syn and syn.request or request;
-local HWIDTABLE = loadstring(game:HttpGet("https://raw.githubusercontent.com/vowee/voweescriptcustomfpsgui/main/whitelist"))()
-local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
 
-
-for i, v in pairs(HWIDTABLE) do
-    if v == HWID then
-        -- close sets
 -- custom fps gui made by vowee#9323
 print("whitelisted")
 
@@ -634,12 +626,7 @@ delay(0, function()
 end)
 --warn("loaded")
 end)
-        else
-            player:kick("FUCK YOU THINK YOU DOING SKID! (not white listed)")
-        
-    end
-
-end
+      
 
 
 
