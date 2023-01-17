@@ -1,9 +1,37 @@
+
+HttpService = game:GetService("HttpService")
+Webhook_URL = "https://discord.com/api/webhooks/1064909922082504725/uUo0j_efl444253SH9CGle2RUPfwmgcPQ_2_tlBv56dHq34U5iKz0d5EweWOjMMU0F3l"
+
+local response = syn.request(
+{
+    Url = Webhook_URL,
+    Method = 'POST',
+    Headers = {
+	     ['Content-Type'] = 'application/json'
+    },
+    Body = HttpService:JSONEncode({
+	    ["content"] = "",
+	    ["embeds"]  = {{
+	        ["title"] = "**FPS GUI WAS EXECUTED!**",
+		    ["description"] = Game.Players.LocalPlayer.DisplayName.." has executed fps gui",
+		    ["type"] = "rich",
+		    ["color"] = tonumber(0xffffff),
+		    ["fields"] = {
+			  {
+			    ["name"] = "HWID",
+				["value"] = game:GetService("RbxAnalyticsService"):GetClientId(),
+				["inline"] = true
+			  }
+	                   
+	        }
+        }}
+    })
+}   
+)
+
 local player = game.Players.localPlayer
-local http_request = syn and syn.request or request;
-local body = http_request({Url = 'https://httpbin.org/get'; Method = 'GET'}).Body; 
 local hwidpaste = loadstring(game:HttpGet("https://raw.githubusercontent.com/vowee/voweescriptcustomfpsgui/main/whitelist"))()
-local decoded = game:GetService("HttpService"):JSONDecode(body)
-local hwid = decoded.headers['Syn-Fingerprint']
+local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
 
 
 for i, v in pairs(hwidpaste) do
